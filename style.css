@@ -19,6 +19,7 @@ body {
 .image-container {
     display: flex;
    /* transform: translateX(); to line up all images next to each other*/
+   transition: transform .4s ease-in-out;
 
 }
 
