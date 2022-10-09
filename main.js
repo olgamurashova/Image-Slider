@@ -2,31 +2,33 @@ const next = document.querySelector(".next");
 
 const prev = document.querySelector(".prev");
 
+const img = document.querySelectorAll("img");
+
 const imageContainer = document.querySelector(".image-container");
 
-const img = document.querySelectorAll("img");
+
 
 let currentImg = 1;
 let timeout;
 
 
-next.addEventListener("click",()=>{
+next.addEventListener("click", () => {
     currentImg++;
     clearTimeout(timeout);
     updateImg();
 
 });
 
-prev.addEventListener("click",()=>{
+prev.addEventListener("click", () => {
     currentImg--;
     clearTimeout(timeout);
     updateImg();
-})
+});
 
 updateImg();
 
-function updateImg(){
-    if(currentImg > img.legth){
+function updateImg() {
+    if(currentImg > img.length){
         currentImg = 1;
     }
     else if(currentImg < 1) {
